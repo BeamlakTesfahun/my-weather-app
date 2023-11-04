@@ -15,21 +15,37 @@
   <body>
     <div class="container">
       <header>
-        <form>
-          <input type="search" placeholder="Enter a city" required />
-          <input type="submit" placeholder="Search" />
+        <form class="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city"
+            required
+            class="search-form-input"
+          />
+          <input
+            type="submit"
+            placeholder="Search"
+            class="search-form-button"
+          />
         </form>
       </header>
       <main>
-        <div>
-          <h1>Addis Ababa</h1>
-          <p>
-            Thursday 15:31, Mostly cloudy
-            <br />
-            Humidity: 69%, Wind: 26 km/h
-          </p>
+        <div class="weather-app-parameters">
+          <div>
+            <h1 class="weather-app-city">Addis Ababa</h1>
+            <p class="weather-app-data">
+              Thursday 15:31, Mostly cloudy
+              <br />
+              Humidity: <strong class="humidity">69%</strong>, Wind:
+              <strong class="wind-speed">26 km/h</strong>
+            </p>
+          </div>
+          <div class="weather-app-data-container">
+            <div class="weather-app-emoji">⛅</div>
+            <div class="weather-app-temp">19</div>
+            <div class="weather-app-unit">°C</div>
+          </div>
         </div>
-        <div>⛅ 19°C</div>
       </main>
       <footer>
         This project was coded by
