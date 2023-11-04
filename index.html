@@ -10,17 +10,18 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/style.css" />
-    <title>Document</title>
+    <title>Weather App</title>
   </head>
   <body>
     <div class="container">
       <header>
-        <form class="search-form">
+        <form class="search-form" id="search-form-id">
           <input
             type="search"
             placeholder="Enter a city"
             required
             class="search-form-input"
+            id="search-form-input-id"
           />
           <input
             type="submit"
@@ -32,7 +33,7 @@
       <main>
         <div class="weather-app-parameters">
           <div>
-            <h1 class="weather-app-city">Addis Ababa</h1>
+            <h1 class="weather-app-city" id="city-id">Addis Ababa</h1>
             <p class="weather-app-data">
               Thursday 15:31, Mostly cloudy
               <br />
@@ -65,5 +66,6 @@
         >
       </footer>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
