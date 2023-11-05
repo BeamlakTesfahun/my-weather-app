@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <title>Weather App</title>
   </head>
   <body>
@@ -33,7 +34,7 @@
       <main>
         <div class="weather-app-parameters">
           <div>
-            <h1 class="weather-app-city" id="city-id">Addis Ababa</h1>
+            <h1 class="weather-app-city" id="city-id"></h1>
             <p class="weather-app-data">
               Thursday 15:31, Mostly cloudy
               <br />
@@ -43,7 +44,7 @@
           </div>
           <div class="weather-app-data-container">
             <div class="weather-app-emoji">⛅</div>
-            <div class="weather-app-temp">19</div>
+            <div class="weather-app-temp" id="temp-id">19</div>
             <div class="weather-app-unit">°C</div>
           </div>
         </div>
