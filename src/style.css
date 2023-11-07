@@ -36,13 +36,16 @@ a {
 .weather-app-temp {
   font-size: 60px;
   font-weight: bold;
+  line-height: 88px;
 }
 .weather-app-emoji {
-  font-size: 35px;
-  margin-top: 18px;
+  width: 78px;
+  height: 88px;
+  margin-top: 1px;
 }
 .weather-app-unit {
-  margin-top: 15px;
+  margin-top: 19px;
+  font-weight: bold;
 }
 .container {
   background-color: white;
@@ -69,6 +72,7 @@ a {
   border-radius: 6px;
   color: white;
 }
+
 footer {
   border-top: 1px solid #f9f7fe;
   padding: 30px 0 0 0;

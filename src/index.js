@@ -35,6 +35,10 @@ function updateWeatherParameters(response) {
   humSelector.innerHTML = response.data.main.humidity;
   windSpeedSelector.innerHTML = Math.round(response.data.wind.speed);
   decriptionSeelctor.innerHTML = response.data.weather[0].description;
+  let iconSelector = document.querySelector("#icon");
+  var iconCode = response.data.weather[0].icon;
+  //var iconUrl = "https://openweathermap.org/img/wn/" + iconCode + ".png";
+  iconSelector.innerHTML = `<img src="https://openweathermap.org/img/wn/${iconCode}@2x.png" class="weather-app-emoji" />`;
 }
 function cityFunction(city) {
   let apiKey = "63f6b7ca37c5806f98b038dfd37c0251";
