@@ -39,6 +39,7 @@ function updateWeatherParameters(response) {
   var iconCode = response.data.weather[0].icon;
   //var iconUrl = "https://openweathermap.org/img/wn/" + iconCode + ".png";
   iconSelector.innerHTML = `<img src="https://openweathermap.org/img/wn/${iconCode}@2x.png" class="weather-app-emoji" />`;
+  getForecast(response.data.name);
 }
 function cityFunction(city) {
   let apiKey = "63f6b7ca37c5806f98b038dfd37c0251";
@@ -53,4 +54,34 @@ function searchFormFunction(event) {
 }
 let searchFormSelector = document.querySelector("#search-form-id");
 searchFormSelector.addEventListener("submit", searchFormFunction);
+function displayForecast(response) {
+  console.log(response.data);
+  let forecastSelector = document.querySelector("#forecast-id");
+  let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
+  let forecastHtml = "";
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+      <div class="weather-forecast-day">
+        <div class="weather-forecast-date">${day}</div>
+        <div class="weather-forecast-icon">🌤️</div>
+        <div class="weather-forecast-temperatures">
+          <span class="weather-forecast-temperature">
+            <strong>15º</strong>
+          </span>
+          <span class="weather-forecast-temperature">9º</span>
+        </div>
+      </div>
+    `;
+  });
+  forecastSelector.innerHTML = forecastHtml;
+}
+function getForecast(city) {
+  let apiKey = "dct7a833c24072f2b20aa7d41dobe337";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+
 cityFunction("Addis Ababa");
+//displayForecast();
