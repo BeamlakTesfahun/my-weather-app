@@ -12,6 +12,7 @@ main {
 a {
   color: #885df1;
 }
+
 .weather-app-data-container {
   display: flex;
 }
@@ -24,11 +25,18 @@ a {
   font-size: 38px;
   line-height: 68px;
 }
+#date-time,
+#description-id,
+#humidity-opacity,
+#wind-opacity {
+  opacity: 0.3;
+}
 .weater-app-data {
   font-size: 16px;
   color: rgba(39, 33, 66, 0.4);
   line-height: 24px;
   font-weight: 500;
+  opacity: 0.2;
 }
 .weather-app-parameters strong {
   color: #f65282;
@@ -72,7 +80,21 @@ a {
   border-radius: 6px;
   color: white;
 }
-
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: #000;
+}
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.4;
+}
+.weather-forecast-temperature {
+  font-size: 13px;
+}
+.weather-forecast-min-temp {
+  opacity: 0.4;
+}
 footer {
   border-top: 1px solid #f9f7fe;
   padding: 30px 0 0 0;

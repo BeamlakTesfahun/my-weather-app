@@ -39,8 +39,9 @@
               <span id="date-time"></span><span>,</span>
               <span class="description" id="description-id"></span>
               <br />
-              Humidity: <strong class="humidity" id="humidity-id"></strong
-              ><strong>%</strong>, Wind:
+              <span id="humidity-opacity"> Humidity: </span>
+              <strong class="humidity" id="humidity-id"></strong
+              ><strong>%</strong>, <span id="wind-opacity">Wind: </span>
               <strong class="wind-speed" id="speed-id"></strong
               ><strong> km/h</strong>
             </p>
@@ -56,6 +57,22 @@
             </div>
             <div class="weather-app-temp" id="temp-id"></div>
             <div class="weather-app-unit">°C</div>
+          </div>
+        </div>
+        <div class="weather-forecast">
+          <div class="row">
+            <div class="col-2">
+              <div class="weather-forecast-date">Thu</div>
+              <img
+                src="https://openweathermap.org/img/wn/03d@2x.png"
+                alt=""
+                width="46"
+              />
+              <div class="weather-forecast-temperature">
+                <span class="weather-forecast-max-temp">18°</span>
+                <span class="weather-forecast-min-temp">18°</span>
+              </div>
+            </div>
           </div>
         </div>
       </main>
